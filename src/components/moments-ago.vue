@@ -28,13 +28,28 @@ export default {
         he: {
           few: "כמה",
           postfix: "",
-        }
+        },
+        nl: {
+          few: "enkele",
+          postfix: "",
+        },
       },
       epochs: {
         en: ["year", "month", "day", "hour", "minute"],
         kr: ["년", "달", "일", "시간", "분"],
         jp: ["年", "月", "日", "時", "分"],
-        he: ["שנה", "חודש", "יום", "שעה", "דקה"]
+        he: ["שנה", "חודש", "יום", "שעה", "דקה"],
+        nl: ["jaar", "maand(en)", "dag(en)", "uur", "minuut"],
+        // This is a nice first start, but it should be something like...
+        //
+        // nl_singular: ["jaar", "maand", "dag", "uur", "minuut"],
+        // nl_plural:   ["jaren", "maanden", "dagen", "uren", "minuten"],
+        //
+        //   > 1 month ago,     2 months ago,      1 hour ago,    a few minutes ago
+        //   > 1 maand geleden, 2 maanden geleden, 1 uur geleden, enkele minuten geleden
+        //
+        // TODO: Refactor this into an object with singular and plural nominations
+        //       e.g. nl: { "singular": [ "jaar" ... ], "plural": [ "jaren" ...] },
       },
       year: 31536000,
       month: 2592000,
